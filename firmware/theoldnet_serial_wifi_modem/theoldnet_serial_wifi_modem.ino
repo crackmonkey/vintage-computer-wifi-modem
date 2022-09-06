@@ -487,7 +487,7 @@ void connectWiFi() {
   }
   Serial.println();
   if (i == 21) {
-    Serial.print("COULD NOT CONNET TO "); Serial.println(ssid);
+    Serial.print("COULD NOT CONNECT TO "); Serial.println(ssid);
     WiFi.disconnect();
     updateLed();
   } else {
