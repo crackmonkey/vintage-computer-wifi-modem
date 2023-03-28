@@ -14,7 +14,8 @@ https://raw.githubusercontent.com/ssshake/vintage-computer-wifi-modem/master/esp
 
 4) Choose your board here and make sure all of the settings in the Tools menu matches this screen shot.
 
- 
+![https://raw.githubusercontent.com/ssshake/vintage-computer-wifi-modem/master/docs/choosedevice.png](https://raw.githubusercontent.com/ssshake/vintage-computer-wifi-modem/master/docs/choosedevice.png) 
+
 
 5) Change this settings to that everything is erased off the device. By default the config will remain. If the config is corrupted it must be cleared out or else the re-flash won’t help.
 

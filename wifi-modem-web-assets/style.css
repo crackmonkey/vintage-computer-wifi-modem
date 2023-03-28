@@ -1,0 +1,40 @@
+@font-face {
+    font-family: dos;
+    src: url('./fonts/ModernDOS8x16.ttf')
+}
+
+body {
+    background-color: rgb(111, 198, 213);
+    color:rgb(26, 26, 26);
+    font-family: dos;
+    max-width: 800px;
+    margin: auto;
+}
+
+div {
+    margin: 6px;
+    padding: 6px;
+    /* border: 6px double rgb(102, 0, 127); */
+    border: 6px double rgb(147, 41, 41);
+    background-color: rgb(219, 219, 213);
+}
+
+ul {
+    width: 300px;
+}
+
+li {
+    margin: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.info {
+    border: 6px inset rgb(231, 123, 229);
+    background-color: rgb(219, 219, 213);
+}
+
+.speeddial{
+    border: none;
+}

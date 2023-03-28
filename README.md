@@ -1,3 +1,7 @@
+**TODO: make this documentation more user friendly and less nerdy**
+
+This repository contains the Hayes Modem & PPP firmware for The Old Net Serial to WIFI Adapter. If you do not care about the source code and just want the firmware, supporting tools and documentation please direct your attention here instead: [https://github.com/TheOldNet/theoldnet-wifi-firmware-binaries](https://github.com/TheOldNet/theoldnet-wifi-firmware-binaries)
+
 The Old Net - RS232 Serial WIFI Modem
 =========================
 ![](https://raw.githubusercontent.com/ssshake/vintage-computer-wifi-modem/master/docs/modemv3.jpg)
@@ -54,7 +58,7 @@ AT command examples
 * Connect to WiFi: ATC1
 * Save current settigns to NVRAM: AT&W
 * Connect by TCP: ATDTsome.bbs.com:23
-* Connect by PPP: ATDTPPP
+* Connect by PPP: ATDTPPP or ATDT777 (for systems which cannot dial letters)
 * Disable telnet command handling: ATNET0
 * Get my IP: ATIP
 * Make a HTTP GET request: ATGEThttp://host:80/path
@@ -109,3 +113,31 @@ Example communication
                         and is hosted at Nebula, Finland.
 
 
+
+
+Gopher Usage
+=========================
+
+This PR contains a small change which:
+
++ Implements logic required to make gopher requests
++ Adds the gopher command to the help documentation
++ Updates the build number
+
+The code used for making Gopher requests is based on the HTTP GET code, but with the necessary changes made for the Gopher protocol.
+
+**Usage**
+
+The command can be used like so:
+
+`ATGPHgopher://gopherpedia.com`
+
+Selectors can be added after the URL:
+
+`ATGPHgopher://gopherpedia.com/Gopher_(protocol)`
+
+Port is optional and will default to the standard gopher port of 70.
+
+**Working Demo**
+
+https://www.youtube.com/watch?v=MX2fRlIGkQk

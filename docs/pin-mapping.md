@@ -10,6 +10,20 @@ This is a list of pin mappings so that you can make your own custom cables to ad
 
 Unconfirmed if should be cross over or straight through. One person tests cross over and said it's good, the other said straight through is good. 
 
+Contributor junkjunker did some testing and said this
+
+```
+Regarding the confusion on vintage-computer-wifi-modem/docs/pin-mapping.md about 
+the Apple IIc cable and whether the pins should cross or be straight through, 
+I can confirm that a cross over cable works on the Apple IIc's Modem Port (labelled "2") with ADTPro.
+
+Null Modem Cable:
+DIN 5 ---> DB9
+2 (tx) ---> 2 (rx)
+3 (gnd) -> 5 (gnd)
+4 (rx) ---> 3 (tx)
+```
+
 ![](https://raw.githubusercontent.com/ssshake/vintage-computer-wifi-modem/master/docs/unnamed.jpg)
 
 ***
