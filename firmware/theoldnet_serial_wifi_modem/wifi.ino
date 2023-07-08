@@ -18,12 +18,17 @@ void wifiSetup(){
 }
 
 void connectWiFi() {
-  if (ssid == "" || password == "") {
-    Serial.println("CONFIGURE SSID AND PASSWORD. TYPE AT? FOR HELP.");
+  if (ssid == "" ) {
+    Serial.println("CONFIGURE SSID. TYPE AT? FOR HELP.");
     return;
   }
-  WiFi.begin(ssid.c_str(), password.c_str());
-  Serial.print("\nCONNECTING TO SSID "); Serial.print(ssid);
+  if (password == "" ) {
+    Serial.print("\nCONNECTING TO SSID "); Serial.print(ssid);Serial.print("(No password)");
+    WiFi.begin(ssid.c_str());
+  } else {
+    Serial.print("\nCONNECTING TO SSID "); Serial.print(ssid);
+    WiFi.begin(ssid.c_str(), password.c_str());
+  }
   uint8_t i = 0;
   while (WiFi.status() != WL_CONNECTED && i++ < 20) {
     digitalWrite(LED_PIN, LOW);
